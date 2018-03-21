@@ -13,8 +13,12 @@
             <%= image_tag 'icons/heart-black', class: 'topic-index-icon' %>
             <% end %>
             <% end %>
-            <%= link_to comments_path(topic_id: topic.id), method: :post do %>
+
+            <% if !topic.comment_users.include?(current_user) %>
+            <%= link_to new_comments_path(topic_id: topic.id), method: :post do %>
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+
+            <% end %>
             <% end %>
             <p class="topic-text">
               <%= topic.description %>
