@@ -1,14 +1,3 @@
-<!-- ここにボタンだけ設置して、newの方にフォームを入れる？？ -->
-
-<div class="topic-index-wrapper">
-  <div class="container">
-
-
-    <%= form_for @comment do |f| %>
-    <%= f.text_field :user %>
-    <%= f.text_area :body %>
-    <button type="submit" class="btn btn-primary">コメント</button>
-    <% end %>
-
-  </div>
-  </div>
+<% @comments.each do |comment| %>
+<%= @comment.body %>
+<% end %>

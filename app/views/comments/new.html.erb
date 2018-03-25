@@ -1,16 +1,10 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <%= form_for @comment do |f| %>
+    <%= f.text_area :body %>
+    <%= f.hidden_field "topicid", :value => params[:topic_id] %>
+    <%= f.submit "コメント" %>
+    <% end %>
 
-
-<!-- ここに書かなくていい部分もあるっぽいので修正する。
-
-
-<%= form_tag("comments/new") do %>
-   <form>
-     <div class="form-group">
-       <textarea name="comment" class="form-control"></textarea>
-       <textarea name="favorite.topic_id" class="hidden"><%= topic_id %></textarea>
-       <textarea name="comment.user_id" class="hidden"><%= comment.user_id %></textarea>
-     </div>--><!--form-group-->
-     <!--
-     <button type="submit" class="btn btn-primary">コメント</button>
-   <% end %>
-   -->
+  </div>
+  </div>
