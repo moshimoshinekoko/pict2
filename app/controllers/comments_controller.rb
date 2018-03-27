@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
   def index
-    @comment = Comment.new
     @comment_topics = current_user.comment_topics
+    @comments = topic.comment.includes(:user).all
+
   end
 
   def new
@@ -13,6 +14,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(body: params[:comment][:body], topic_id: params[:comment][:topicid], user_id: params[:user_id])
     @comment.user = current_user
     @comment.topic_id = params[:comment][:topicid]
+
 
    if @comment.save
 

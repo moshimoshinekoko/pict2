@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post '/favorites', to: 'favorites#create'
   get '/new', to: 'comments#new'
   post '/comments', to: 'comments#create'
+  get 'comments/index', to: 'comments#index'
 
   resources 'users'
   resources 'topics'
