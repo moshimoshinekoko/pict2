@@ -22,8 +22,13 @@
             <p class="topic-text">
               <%= topic.description %>
               <% topic.comments.each do |comments| %>
-              <%= topic.comments %>
-              <% end %>
+              <% topic.comment_users.each do |users| %>
+            <li>
+              <%= users.name %>
+              <%= comments.body %>
+            </li>
+            <% end %>
+            <% end %>
 
 
 
