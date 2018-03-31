@@ -21,13 +21,11 @@
             <% end %>
             <p class="topic-text">
               <%= topic.description %>
-              <% topic.comments.each do |comments| %>
-              <% topic.comment_users.each do |users| %>
+              <% topic.comments.each do |comment| %>
             <li>
-              <%= users.name %>
-              <%= comments.body %>
+              <%= comment.user.name %>
+              <%= comment.body %>
             </li>
-            <% end %>
             <% end %>
 
 

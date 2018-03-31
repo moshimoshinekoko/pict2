@@ -1,5 +1,7 @@
 class TopicsController < ApplicationController
+
   def new
+    topic = aaa
     @topic = Topic.new
   end
 
