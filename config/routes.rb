@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/new', to: 'comments#new'
   post '/comments', to: 'comments#create'
   get 'comments/index', to: 'comments#index'
+  get 'topics/ajaxtest'
 
   resources 'users'
   resources 'topics'
